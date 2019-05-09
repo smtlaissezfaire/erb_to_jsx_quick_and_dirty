@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+puts "ARGV: #{ARGV}"
+
+$LOAD_PATH << File.dirname(__FILE__) + '/../lib'
+
+require 'erb_to_jsx_quick_and_dirty'
+
+ErbToJsxQuickAndDirty::Runner.run(ARGV[0])
