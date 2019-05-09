@@ -37,7 +37,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/smtlai
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the ErbToJsxQuickAndDirty project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/smtlaissezfaire/erb_to_jsx_quick_and_dirty/blob/master/CODE_OF_CONDUCT.md).
