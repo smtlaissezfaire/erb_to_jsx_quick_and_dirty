@@ -39,7 +39,7 @@ module ErbToJsxQuickAndDirty
       end
 
       # can't use extname here as it would change foo.html.erb => foo.html
-      file_name_without_extension = File.basename(file_name).gsub(/^([^\.]+).*/) { $1 }
+      file_name_without_extension = File.basename(file_name).gsub(/^_?([^\.]+).*/) { $1 }
 
       component_name = file_name_without_extension.classify
 
