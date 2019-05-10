@@ -42,23 +42,27 @@ module ErbToJsxQuickAndDirty
       file_name_without_extension = File.basename(file_name).gsub(/^_?([^\.]+).*/) { $1 }
 
       component_name = file_name_without_extension.classify
+      component_file_name = "#{component_name}.jsx"
 
       file_contents = <<-CODE
 import React from 'react';
 
-export class #{component_name} extends React.Component {
+export default class #{component_name} extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
-    #{indent(file_contents, '    ')}
+    return (
+      #{indent(file_contents, '      ')}
+    )
+
   }
 }
 CODE
 
 
-      File.write("#{file_name_without_extension}.jsx", file_contents)
+      File.write(component_file_name, file_contents)
     end
 
   private
